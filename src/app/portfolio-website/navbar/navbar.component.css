@@ -1,0 +1,14 @@
+.container{
+    padding: 20px 10%;
+} 
+#navbar{
+    background-size: cover;
+    background-position: cover;
+  }
+
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
