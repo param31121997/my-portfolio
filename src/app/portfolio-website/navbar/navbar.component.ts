@@ -14,6 +14,7 @@ sideMenu:any;
 constructor(public router:Router){
 }
   onClick(path:string){
+    this.closeMenu();
     this.router.navigate([`./${path}`])
   }
 
