@@ -13,7 +13,9 @@
   height: 80vh;
   min-height: 600px;
   margin: 0 10%;
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(../../../assets/wp10925608.jpg);
+  border-radius: 30px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom, rgba(147,51,234,0.55), rgba(15,23,42,0.55)), url(../../../assets/wp10925608.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -34,7 +36,10 @@
 }
 
 .header-text h1 span{
-  color: #ff004f;
+  background: linear-gradient(90deg, #f0abfc, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .header-skills li{
   display: block;
@@ -42,6 +47,80 @@
 
 .btn.btn2{
   display: inline-block;
-  background: #ff004f;
+  background: linear-gradient(90deg, #9333ea, #ec4899);
+  border: none;
 }
 
+.header-btns{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.header-btns .btn{
+  display: inline-block;
+  margin: 0;
+}
+
+.btn-outline{
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-outline:hover{
+  border-color: #f0abfc;
+  color: #f0abfc;
+  background: transparent;
+}
+
+.badge{
+  display: inline-block;
+  padding: 6px 18px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.stats-row{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(90px,120px));
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.stat{
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.stat:hover{
+  border-color: #f0abfc;
+  transform: translateY(-4px);
+}
+
+.stat h3{
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 4px 0;
+}
+
+.stat p{
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #e9d5ff;
+  margin: 0;
+}

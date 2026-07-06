@@ -1,10 +1,13 @@
 .container{
-    padding: 20px 10%;
-} 
+    padding: 18px 10%;
+}
 #navbar{
-    background-size: cover;
-    background-position: cover;
-  }
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
 
 .logo{
     width: 40px;
@@ -12,3 +15,57 @@
     border-radius: 25px;
 }
 
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-name{
+    font-weight: 600;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.contact-cta{
+    position: relative;
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    background: #9333ea;
+    color: #fff;
+    padding: 10px 26px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(147,51,234,0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.contact-cta:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+}
+
+.contact-cta::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s;
+}
+
+.contact-cta:hover::after{
+    left: 130%;
+}
+
+@media(min-width:768px){
+    .contact-cta{
+        display: inline-flex;
+    }
+}

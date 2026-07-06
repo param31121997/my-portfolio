@@ -9,25 +9,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  showEducation:boolean=true
-  showProjects:boolean=true
-  isSkills:boolean=true;
-  isExperience:boolean=false
-  isEducation:boolean=false
-
-  onTabLinkClick(link:any){
-    if(link == 'skills'){
-      this.isSkills = true;
-      this.isEducation = false;
-      this.isExperience = false
-    }else if(link == 'experience'){
-      this.isSkills = false;
-      this.isEducation = false;
-      this.isExperience = true
-    }else{
-      this.isSkills = false;
-      this.isEducation = true;
-      this.isExperience = false
-    }
-  }
 }

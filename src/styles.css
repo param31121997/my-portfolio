@@ -6,13 +6,24 @@
   box-sizing: border-box;
 }
 
+:root{
+  --accent: #9333ea;
+  --accent-light: #a855f7;
+  --accent-pink: #ec4899;
+  --bg: #fafafa;
+  --bg-alt: #ffffff;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+}
+
 html{
   scroll-behavior: smooth;
 }
 
 body{
-  background: #080808;
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
 }
 
 
@@ -55,7 +66,7 @@ ul li a::after {
   content: '';
   width: 0;
   height: 3px;
-  background: #ff004f;
+  background: linear-gradient(90deg, var(--accent), var(--accent-pink));
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -70,7 +81,7 @@ ul li a:hover::after {
  width: 100%;
 }
 ul li a {
-  color: #fff;
+  color: var(--text);
   font-weight: bold;
   text-decoration: none;
   font-size: 18px;
@@ -80,12 +91,19 @@ ul li a {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 2px solid var(--accent);
   padding: 14px 50px;
-  border-radius: 6px;
+  border-radius: 30px;
   text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+  background: transparent;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover{
+  background: var(--accent);
   color: #fff;
-  transition: background 0.5s;
 }
 
  .fa-circle-xmark, .fa-bars{
@@ -119,7 +137,7 @@ ul li a {
   }
   
   app-navbar ul{
-    background: #ff004f;
+    background: linear-gradient(160deg, var(--accent), var(--accent-pink));
     position: fixed;
     top: 0;
     right: -200px;
@@ -133,6 +151,10 @@ ul li a {
   app-navbar ul li{
     display: block;
     margin: 25px;
+  }
+
+  app-navbar ul li a{
+    color: #fff;
   }
 
   app-navbar ul .fa-solid {

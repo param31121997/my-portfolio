@@ -2,84 +2,136 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="../../../assets/About-me.png" alt="about">
+                <div class="about-img-wrap">
+                    <img src="../../../assets/About-me.png" alt="about">
+                    <div class="social-bar">
+                        <a href="https://www.linkedin.com/in/param311997" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:pwankhede700@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:9689533634"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>I am a passionate Full Stack Developer with expertise in building scalable web applications using a
-                    diverse set of technologies. With a solid foundation in both backend and frontend development.</p>
-                <div class="tab-titles">
-                    <p [ngClass]="isSkills? 'tab-links active-link' : 'tab-links'" (click)="onTabLinkClick('skills')">
-                        Skills</p>
-                    <p [ngClass]="isExperience? 'tab-links active-link' : 'tab-links'"
-                        (click)="onTabLinkClick('experience')">Experience</p>
-                    <p [ngClass]="isEducation? 'tab-links active-link' : 'tab-links'"
-                        (click)="onTabLinkClick('education')">Education & Achievements</p>
-                </div>
-                <div *ngIf="isSkills" class="tab-content">
-                    <ul>
-                        <li><span>Backend Development</span><br>Experienced in building robust, microservice-based backend services with Spring Boot, leveraging both MySQL and MongoDB for data persistence (ORM via Hibernate), and integrating Elasticsearch for powerful search capabilities. I secure every endpoint with Spring Security and JWT, ensuring enterprise-grade authentication and authorization across distributed services. <br></li><br>
-                        <li><span>Frontend Development</span><br>Proficient in
-                            developing end-to-end web applications
-                            using Angular, HTML, CSS, JavaScript and
-                            jsonForms.</li><br>
-                        <li><span>Spring Security & JWT:</span><br>Securing
-                            applications with authentication and
-                            authorization.</li><br>
-                        <li><span>Elasticsearch</span><br>Capable of implementing
-                            search and analytics solutions.</li>
-                        <br>
-                        <li><span>Jasmine/JUnit</span><br>Writing unit tests to
-                            ensure code reliability</li>
-                        <li><span>Azure</span><br>Proficient in utilizing Azure services
-                            for full-stack development.
-                        </li>
-                        <li><span>Git</span><br>Proficient in version control for
-                            collaborative development</li>
-                    </ul>
-                </div>
-                <div *ngIf="isExperience" class="tab-content">
-                    <ul>
+                <p>I'm Parmeshwar, a Full Stack Developer based in Pune, India. I specialize in building high-performance Java backend systems and responsive Angular frontends — then shipping them as scalable, containerized solutions on Azure.</p>
+            </div>
+        </div>
 
-                        <li><span>Senior System Engineer</span><br>
-                            <b>Infosys limited</b> | March 2024- Present</li><br>
-                        <li><span>System Engineer</span><br>
-                            <b>Infosys limited</b> | Feb 2022- Feb 2024 </li><br>
-                        <li><span>Project: Toolbox-Horizon (Client: Boeing)
-                            </span><br>&#8718;<b>Technologies Used:</b>Spring Boot, Java, Angular, JSONForms,
-                            Azure, Unit Testing, Elasticsearch.
-                            <br>&#8718;<b>Project Description:</b> Toolbox-Horizon is a comprehensive
-                            project aimed at enhancing the efficiency and reliability of an
-                            aerospace company's tool management system. The project
-                            focuses on improving user experience through a consolidated
-                            home screen, advanced search functionalities, and seamless
-                            data browsing.
-                        </li>
-                    </ul>
+        <div class="resume-section">
+            <div class="resume-heading">
+                <span class="eyebrow">Resume</span>
+                <h2>Education <span>&</span> Experience</h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="marker"><i class="fa-solid fa-briefcase"></i></span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Full Stack Developer</h3>
+                                <div class="org"><i class="fa-solid fa-building"></i> Oracle</div>
+                            </div>
+                            <span class="duration-badge"><i class="fa-solid fa-calendar"></i> Aug 2025 - Present</span>
+                        </div>
+                        <h4 class="block-label">Highlights</h4>
+                        <ul class="highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Building full-stack features end-to-end with Java, Spring Boot, and Angular.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Contributing to cloud-native, containerized services deployed on Azure.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div *ngIf="isEducation" class="tab-content">
-                    <ul>
-                        <li><span>Bachelor of Electrical Engineering</span>
-                            <br>University: Amaravti<br>
-                            Graduation Year: 2019
-                        </li>
-                        <li><span>Achievements</span><br>&#8718;<b>Recognition or Awards:</b>Received Awards Insta
-                            Award,
-                            Learning Champ and Star Performer of Month from peers
-                            and superiors for outstanding performance, innovative
-                            solutions, or exceptional contributions to project success.
-                            <br>&#8718;<b>Team Collaboration:</b>Actively contributed to cross-functional
-                            teams, fostering collaboration and knowledge sharing,
-                            resulting in accelerated project timelines and improved team
-                            morale.
-                            <br>&#8718;<b>Training and Mentorship:</b> Provided guidance and
-                            mentorship to junior team members, within the
-                            organization.
-                        </li>
-                    </ul>
+
+                <div class="timeline-item">
+                    <span class="marker"><i class="fa-solid fa-briefcase"></i></span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Senior System Engineer</h3>
+                                <div class="org"><i class="fa-solid fa-building"></i> Infosys Limited</div>
+                            </div>
+                            <span class="duration-badge"><i class="fa-solid fa-calendar"></i> Apr 2024 - Aug 2025</span>
+                        </div>
+                        <h4 class="block-label">Highlights</h4>
+                        <ul class="highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Assisted in developing web applications using Java and Angular.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Participated in code reviews and improved code quality.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Wrote and optimized SQL queries for data retrieval and manipulation.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Developed unit tests to maintain high code standards.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <div class="highlight-box-label"><i class="fa-solid fa-diagram-project"></i> Key Project</div>
+                            <div class="highlight-box-title">Toolbox-Horizon <span>(Client: Boeing)</span></div>
+                            <p>Tool management system for an aerospace company — consolidated home screen, advanced search, and seamless data browsing.</p>
+                            <p class="tech-line">Spring Boot, Java, Angular, Docker, Kubernetes, Azure, Elasticsearch</p>
+                        </div>
+                        <h4 class="block-label">Certifications & Skills</h4>
+                        <div class="pill-row">
+                            <span class="pill">Infosys Certified Full Stack Professional</span>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="timeline-item">
+                    <span class="marker"><i class="fa-solid fa-briefcase"></i></span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>System Engineer</h3>
+                                <div class="org"><i class="fa-solid fa-building"></i> Infosys Limited</div>
+                            </div>
+                            <span class="duration-badge"><i class="fa-solid fa-calendar"></i> Feb 2022 - Apr 2024</span>
+                        </div>
+                        <h4 class="block-label">Highlights</h4>
+                        <ul class="highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Built foundational full-stack experience — from UI development to backend services.</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Collaborated cross-functionally to deliver features under Agile practices.</li>
+                        </ul>
+                        <h4 class="block-label">Achievements</h4>
+                        <div class="pill-row">
+                            <span class="pill">Insta Award</span>
+                            <span class="pill">Learning Champ</span>
+                            <span class="pill">Star Performer of the Month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="marker"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Bachelor of Engineering</h3>
+                                <div class="org"><i class="fa-solid fa-book-open"></i> Sant Gadge Baba Amravati University</div>
+                            </div>
+                            <span class="duration-badge"><i class="fa-solid fa-calendar"></i> 2016 - 2019</span>
+                        </div>
+                        <ul class="highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Electrical and Electronics Engineering.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="marker"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <div class="timeline-card">
+                        <div class="card-header">
+                            <div>
+                                <h3>Diploma</h3>
+                                <div class="org"><i class="fa-solid fa-book-open"></i> Government Polytechnic, Washim</div>
+                            </div>
+                            <span class="duration-badge"><i class="fa-solid fa-calendar"></i> 2013 - 2016</span>
+                        </div>
+                        <ul class="highlights">
+                            <li><i class="fa-solid fa-circle-check"></i> Electrical and Electronics Engineering.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <!-- <app-footer></app-footer> -->
+</div>
