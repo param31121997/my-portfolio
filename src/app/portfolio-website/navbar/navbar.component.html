@@ -1,18 +1,26 @@
-<div id="navbar" class="container">
-<div class="navbar">
-<div class="brand">
-  <img class="logo" src="../../../assets/avatar.jpg" alt="Logo">
-  <span class="brand-name">Parmeshwar Wankhede</span>
-</div>
-<ul id="sidemenu" class="icon">
-    <li><a (click)="onClick('home')">Home</a></li>
-    <li><a (click)="onClick('about')">About</a></li>
-    <li><a (click)="onClick('skills')">Skills</a></li>
-    <li><a (click)="onClick('portfolio')">PortFolio</a></li>
-    <li><a (click)="onClick('contact')">Contact</a></li>
-    <i class="fa-solid fa-circle-xmark" (click)="closeMenu()"></i>
-</ul>
-<a class="contact-cta" (click)="onClick('contact')"><span>Contact Me</span> <i class="fa-solid fa-arrow-right"></i></a>
-<i class="fa-solid fa-bars" (click)="openMenu()"></i>
-</div>
+<div id="navbar">
+  <div class="container row">
+    <a href="#home" class="brand" (click)="closeMenu()">
+      <img src="../../../assets/About-me.png" alt="Parmeshwar Wankhede" class="logo">
+      <span class="brand-name">Parmeshwar Wankhede</span>
+    </a>
+
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a href="#home" (click)="closeMenu()">Home</a></li>
+      <li><a href="#about" (click)="closeMenu()">About</a></li>
+      <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+      <li><a href="#portfolio" (click)="closeMenu()">Work</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="contact-cta" (click)="closeMenu()">
+      <i class="fa-solid fa-paper-plane"></i> Let's Talk
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </div>

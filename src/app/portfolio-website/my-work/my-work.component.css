@@ -134,3 +134,38 @@
   background: linear-gradient(90deg, #9333ea, #ec4899);
   border-color: transparent;
 }
+
+/* ===== Responsive ===== */
+@media(max-width: 768px){
+  #portfolio{
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .work-list{
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    margin-top: 30px;
+  }
+
+  .section-heading{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Show project info without requiring hover on touch devices */
+  .layer{
+    height: 100%;
+    position: relative;
+    background: linear-gradient(rgba(15,23,42,0.85), rgba(147,51,234,0.92));
+    padding: 24px;
+  }
+
+  .work{
+    min-height: 320px;
+  }
+
+  .work img{
+    display: none;
+  }
+}

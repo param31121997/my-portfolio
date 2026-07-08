@@ -82,3 +82,36 @@
     margin-top: 20px;
     cursor: pointer;
   }
+
+  /* ===== Responsive ===== */
+  @media(max-width: 768px){
+    #contact{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .contact-left, .contact-right{
+      flex-basis: 100%;
+    }
+
+    .contact-left{
+      margin-bottom: 30px;
+    }
+
+    .sub-title{
+      font-size: 30px;
+    }
+  }
+
+  @media(max-width: 480px){
+    form .btn2{
+      width: 100%;
+      padding: 14px 0;
+      text-align: center;
+    }
+
+    .social-icons a{
+      font-size: 24px;
+      margin-right: 12px;
+    }
+  }

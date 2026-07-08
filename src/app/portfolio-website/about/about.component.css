@@ -83,6 +83,19 @@
     padding: 0;
   }
 
+  .about-col-2 p{
+    margin-bottom: 16px;
+  }
+
+  .about-col-2 p:last-child{
+    margin-bottom: 0;
+  }
+
+  .languages-section{
+    margin-top: 50px;
+    text-align: center;
+  }
+
 /* ===== Resume Timeline (Education & Experience) ===== */
 
 .resume-section{
@@ -317,4 +330,49 @@
 .pill:hover{
   background: #9333ea;
   color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media(max-width: 768px){
+  #about{
+    padding-top: 60px;
+  }
+
+  .about-col-1, .about-col-2{
+    flex-basis: 100%;
+  }
+
+  .about-col-1{
+    margin-bottom: 20px;
+  }
+
+  .sub-title{
+    font-size: 30px;
+  }
+
+  .resume-heading h2{
+    font-size: 26px;
+  }
+
+  .timeline-card{
+    padding: 20px;
+  }
+
+  .card-header{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media(max-width: 480px){
+  .marker{
+    width: 36px;
+    height: 36px;
+    font-size: 13px;
+    left: -52px;
+  }
+
+  .timeline-item{
+    margin-left: 28px;
+  }
 }

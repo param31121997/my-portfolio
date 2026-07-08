@@ -1,31 +1,28 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-isOpen:boolean=true;
-sideMenu:any;
-constructor(public router:Router){
-}
-  onClick(path:string){
-    this.closeMenu();
-    this.router.navigate([`./${path}`])
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
-  openMenu(){
-    this.sideMenu =  document.getElementById("sidemenu");
-    this.sideMenu.style.right = "0";
+  closeMenu() {
+    this.menuOpen = false;
   }
 
-  closeMenu(){
-    this.sideMenu =  document.getElementById("sidemenu");
-    this.sideMenu.style.right = "-200px";
+  @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth >= 768) {
+      this.menuOpen = false;
+    }
   }
-
 }

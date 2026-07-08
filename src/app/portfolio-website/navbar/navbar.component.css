@@ -1,6 +1,14 @@
 .container{
     padding: 18px 10%;
+    align-items: center;
 }
+
+@media(max-width: 768px){
+    .container{
+        padding: 14px 6%;
+    }
+}
+
 #navbar{
     background: #ffffff;
     position: sticky;
@@ -21,10 +29,129 @@
     gap: 12px;
 }
 
+.logo{
+    object-fit: cover;
+}
+
 .brand-name{
     font-weight: 600;
     font-size: 18px;
     color: #0f172a;
+}
+
+/* ===== Nav links ===== */
+.nav-links{
+    display: none;
+    align-items: center;
+    gap: 34px;
+}
+
+.nav-links li a{
+    color: #475569;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #9333ea, #ec4899);
+    transition: width 0.3s;
+}
+
+.nav-links li a:hover{
+    color: #9333ea;
+}
+
+.nav-links li a:hover::after{
+    width: 100%;
+}
+
+@media(min-width:768px){
+    .nav-links{
+        display: flex;
+    }
+}
+
+/* ===== Hamburger toggle (mobile only) ===== */
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #0f172a;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media(min-width:768px){
+    .menu-toggle{
+        display: none;
+    }
+}
+
+/* ===== Mobile dropdown menu ===== */
+@media(max-width:767px){
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: #ffffff;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    .nav-links.active{
+        display: flex;
+        max-height: 320px;
+    }
+
+    .nav-links li{
+        width: 100%;
+    }
+
+    .nav-links li a{
+        display: block;
+        padding: 16px 10%;
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+    }
 }
 
 .contact-cta{
